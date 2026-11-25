@@ -1,0 +1,22 @@
+{
+    "name": "AutismoTech 2026",
+    "short_name": "AutismoTech",
+    "description": "Um serviço para agregar links utéis.",
+    "start_url": "./index.html",
+    "display": "standalone",
+    "background_color": "#2e8b57",
+    "theme_color": "#2e8b57",
+    "icons": [
+      {
+        "src": "src/img/logo.png",
+        "sizes": "192x192",
+        "type": "image/png"
+      },
+      {
+        "src": "src/img/logo.png",
+        "sizes": "512x512",
+        "type": "image/png"
+      }
+    ]
+  }
+

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AutismoTech 2026</title>
+    
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#2e8b57">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="src/js/main.js"></script>
+    <script src="service-worker.js"></script>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+</head>
+
+<body class="flex flex-col min-h-screen bg-gray-50 dark:bg-gray-900 text-gray-800 dark:text-gray-200 font-sans transition-colors duration-300">
+    
+    <button id="installButton" class="hidden fixed top-4 right-4 z-50 bg-blue-600 text-white px-4 py-2 rounded-lg border-none cursor-pointer">Instalar App</button>
+    
+    <div class="absolute top-4 right-4 z-50">
+        <button id="theme-toggle" class="p-2 rounded-md focus:outline-none focus:ring-2 focus:ring-white">
+            <i id="theme-icon" class="fas fa-moon text-white text-lg"></i>
+        </button>
+    </div>
+    
+    <main class="flex-grow">
+        <div class="bg-gradient-to-r from-ifsul-green to-ifsul-light-green pt-8 pb-12 px-4 text-center">
+            
+            <div class="flex justify-center mb-4">
+                <div class="relative">
+                    <img src="src/img/logo.png" alt="Logo" class="w-24 h-24 rounded-full shadow-lg border-4 border-white">
+                    <div class="absolute -bottom-1 -right-1 w-8 h-8 bg-white rounded-full flex items-center justify-center border-2 border-ifsul-green">
+                        <i class="fas fa-check text-ifsul-green text-xs"></i>
+                    </div>
+                </div>
+            </div>
+            
+            <h1 class="text-2xl font-bold text-white">AutismoTech 2026</h1>
+            <p class="text-white opacity-90 mt-1">Acesso rápido</p>
+        </div>
+        
+        <div class="w-full max-w-md mx-auto px-4 -mt-8">
+            <div class="bg-white dark:bg-gray-800 rounded-xl shadow-lg p-6 mb-6">
+                <h2 class="text-lg font-semibold text-center mb-4">Links Rápidos</h2>
+                
+                <a href="https://trello.com/invite/b/6af8e5fc7ed38dfbe067c0ba/ATTI08dc0578c90adbde20061337e4c4f15fBA48F6F8/gestao-de-projeto-autismo-tech" target="_blank" class="flex items-center w-full p-4 mb-4 bg-gray-50 dark:bg-gray-700 rounded-xl shadow-md hover:shadow-lg transition-all duration-200 border-l-4 border-ifsul-green">
+                    <div class="flex items-center justify-center w-10 h-10 rounded-lg bg-green-100 dark:bg-green-900/30 mr-3">
+                        <i class="fa-brands fa-trello text-green-600 dark:text-green-400 text-lg"></i>
+                    </div>
+                    <div class="flex-1">
+                        <span class="font-medium text-lg block">Trello</span>
+                        <span class="text-sm text-gray-500 dark:text-gray-400">Acessar o Trello</span>
+                    </div>
+                    <i class="fas fa-chevron-right text-gray-400 ml-2"></i>
+                </a>
+                
+                <a href="https://app.mural.co/t/traducaoiautista2ed3138/m/traducaoiautista2ed3138/1794669927513/004dc8c4fe65dd6431f1ad77780cdff02dd032b2?sender=u58bbd3f2411e0f7d286f8428" target="_blank" class="flex items-center w-full p-4 mb-4 bg-gray-50 dark:bg-gray-700 rounded-xl shadow-md hover:shadow-lg transition-all duration-200 border-l-4 border-ifsul-green">
+                    <div class="flex items-center justify-center w-10 h-10 rounded-lg bg-blue-100 dark:bg-blue-900/30 mr-3">
+                        <i class="fas fa-user-circle text-blue-600 dark:text-blue-400 text-lg"></i>
+                    </div>
+                    <div class="flex-1">
+                        <span class="font-medium text-lg block">Mural</span>
+                        <span class="text-sm text-gray-500 dark:text-gray-400">Acessar o Mural</span>
+                    </div>
+                    <i class="fas fa-chevron-right text-gray-400 ml-2"></i>
+                </a>
+                <a href="https://drive.google.com/drive/u/2/my-drive?hl=pt-br" target="_blank" class="flex items-center w-full p-4 mb-4 bg-gray-50 dark:bg-gray-700 rounded-xl shadow-md hover:shadow-lg transition-all duration-200 border-l-4 border-ifsul-green">
+                    <div class="flex items-center justify-center w-10 h-10 rounded-lg bg-blue-100 dark:bg-blue-900/30 mr-3">
+                        <i class="fa-brands fa-google text-blue-600 dark:text-blue-400 text-lg"></i>
+                    </div>
+                    <div class="flex-1">
+                        <span class="font-medium text-lg block">Google Drive</span>
+                        <span class="text-sm text-gray-500 dark:text-gray-400">Acessar o Google Drive</span>
+                    </div>
+                    <i class="fas fa-chevron-right text-gray-400 ml-2"></i>
+                </a>
+                
+                <a href="https://github.com/" target="_blank" class="flex items-center w-full p-4 mb-4 bg-gray-50 dark:bg-gray-700 rounded-xl shadow-md hover:shadow-lg transition-all duration-200 border-l-4 border-ifsul-green">
+                    <div class="flex items-center justify-center w-10 h-10 rounded-lg bg-blue-100 dark:bg-blue-900/30 mr-3">
+                        <i class="fa-brands fa-github text-blue-600 dark:text-blue-400 text-lg"></i>
+                    </div>
+                    <div class="flex-1">
+                        <span class="font-medium text-lg block">Github</span>
+                        <span class="text-sm text-gray-500 dark:text-gray-400">Acessar o Github</span>
+                    </div>
+                    <i class="fas fa-chevron-right text-gray-400 ml-2"></i>
+                </a>
+                
+                <a href="https://notebook.google.com/notebook/3824d3b6-3546-4a67-997d-2c5e01a1936e?authuser=2" class="flex items-center w-full p-4 mb-4 bg-gray-50 dark:bg-gray-700 rounded-xl shadow-md hover:shadow-lg transition-all duration-200 border-l-4 border-ifsul-green">
+                    <div class="flex items-center justify-center w-10 h-10 rounded-lg bg-red-100 dark:bg-red-900/30 mr-3">
+                        <i class="fas fa-book text-red-600 dark:text-red-400 text-lg"></i>
+                    </div>
+                    <div class="flex-1">
+                        <span class="font-medium text-lg block">NotebookLM</span>
+                        <span class="text-sm text-gray-500 dark:text-gray-400">Acervo e materiais</span>
+                    </div>
+                    <i class="fas fa-chevron-right text-gray-400 ml-2"></i>
+                </a>
+            </div>
+        </div>
+    </main>
+    
+    <footer class="w-full text-center p-6 bg-gray-100 dark:bg-gray-800">
+        <div class="text-sm text-gray-500 dark:text-gray-400">
+            <p class="mt-1">V1.0.0 &copy; 2026 - Licença GPL V2</p>
+            <p class="mt-1">Desenvolvido por <a href="https://www.phaleixo.dev" class="text-blue-500 hover:text-blue-700">phaleixo.dev</a></p>
+        </div>
+    </footer>
+</body>
+</html>
